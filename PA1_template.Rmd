@@ -18,10 +18,10 @@ tot_steps_per_day<-tapply(activity$steps, activity$date, sum, na.rm=T)
 tot_steps_per_day
 ```
 
-2. Histogram of the total number of steps taken each day. The max tot steps/day is `r max(tot_steps_per_day)`, thus set the breaks=`r max(tot_steps_per_day)`/2000 + 1= `r 1+ceiling(max(tot_steps_per_day)/2000)`. 
+2. Histogram of the total number of steps taken each day. The max tot steps/day is `r max(tot_steps_per_day)`, thus set the breaks=`r max(tot_steps_per_day)`/1000 + 1= `r 1+ceiling(max(tot_steps_per_day)/1000)`. 
 
 ```{r, part2, echo=TRUE}
-hist(tot_steps_per_day[tot_steps_per_day>0], breaks=12,main="Histogram of the total number of steps taken each day", xlab="Total steps per day")
+hist(tot_steps_per_day, breaks=23,main="Histogram of the total number of steps taken each day", xlab="Total steps per day")
 ```
 
 3. Calculate and report the mean and median of the total number of steps taken per day.
@@ -85,7 +85,7 @@ new_tot_steps_per_day<-updated_activity %>%
 
 Histogram of the total number of steps taken each day for the imputed dataset.
 ```{r, part10, echo=TRUE}
-hist(new_tot_steps_per_day$steps_total, breaks=12,main="Histogram of the total number of steps taken each day (imputed)", xlab="Total steps per day")
+hist(new_tot_steps_per_day$steps_total, breaks=23,main="Histogram of the total number of steps taken each day (imputed)", xlab="Total steps per day")
 ```
 
 Calculate the mean and median of the total number of steps taken per day for the imputed dataset.

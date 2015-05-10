@@ -45,11 +45,11 @@ tot_steps_per_day
 ##          0
 ```
 
-2. Histogram of the total number of steps taken each day. The max tot steps/day is 21194, thus set the breaks=21194/2000 + 1= 12. 
+2. Histogram of the total number of steps taken each day. The max tot steps/day is 21194, thus set the breaks=21194/1000 + 1= 23. 
 
 
 ```r
-hist(tot_steps_per_day[tot_steps_per_day>0], breaks=12,main="Histogram of the total number of steps taken each day", xlab="Total steps per day")
+hist(tot_steps_per_day, breaks=23,main="Histogram of the total number of steps taken each day", xlab="Total steps per day")
 ```
 
 ![plot of chunk part2](figure/part2-1.png) 
@@ -124,7 +124,7 @@ new_tot_steps_per_day<-updated_activity %>%
 Histogram of the total number of steps taken each day for the imputed dataset.
 
 ```r
-hist(new_tot_steps_per_day$steps_total, breaks=12,main="Histogram of the total number of steps taken each day (imputed)", xlab="Total steps per day")
+hist(new_tot_steps_per_day$steps_total, breaks=23,main="Histogram of the total number of steps taken each day (imputed)", xlab="Total steps per day")
 ```
 
 ![plot of chunk part10](figure/part10-1.png) 
